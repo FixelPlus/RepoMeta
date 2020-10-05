@@ -32,7 +32,6 @@ Author: Elchin Mamedaliev <elchin321@gmail.com>
 Date:   Mon Oct 5 15:11:45 2020 -0400
 
     Created repo and added new empty CurDate file
-bash-3.2$ vi CurDate.java
 bash-3.2$ ls
 CurDate.class	CurDate.java
 bash-3.2$ git add CurDate.java
