@@ -1,0 +1,78 @@
+Script started on Mon Oct  5 15:06:33 2020
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ mkdir Repo1
+bash-3.2$ cd Repo1
+bash-3.2$ pwd
+/Users/elchinmamedaliev/Desktop/git/Repo1
+bash-3.2$ git init
+Initialized empty Git repository in /Users/elchinmamedaliev/Desktop/git/Repo1/.git/
+bash-3.2$ touch CurDate.java
+bash-3.2$ ls
+CurDate.java
+bash-3.2$ git add CurDate.java 
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   CurDate.java
+
+bash-3.2$ git commit -m "Created repo and added new empty CurDate file"
+[master (root-commit) 488a7d6] Created repo and added new empty CurDate file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 CurDate.java
+bash-3.2$ git log
+commit 488a7d6e173ecdd34ef645d9ce5b5f6eefaea937 (HEAD -> master)
+Author: Elchin Mamedaliev <elchin321@gmail.com>
+Date:   Mon Oct 5 15:11:45 2020 -0400
+
+    Created repo and added new empty CurDate file
+bash-3.2$ ls
+CurDate.class	CurDate.java
+bash-3.2$ git add CurDate.java
+bash-3.2$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   CurDate.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	CurDate.class
+
+bash-3.2$ git add -all
+error: did you mean `--all` (with two dashes ?)
+bash-3.2$ git add --all
+bash-3.2$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   CurDate.class
+	modified:   CurDate.java
+
+bash-3.2$ git commit -m "Added code to the CurDate file
+> "
+[master 2417418] Added code to the CurDate file
+ 2 files changed, 13 insertions(+)
+ create mode 100644 CurDate.class
+bash-3.2$ git log
+commit 24174189966841437ddf076720ff7f69946db42e (HEAD -> master)
+Author: Elchin Mamedaliev <elchin321@gmail.com>
+Date:   Mon Oct 5 15:17:17 2020 -0400
+
+    Added code to the CurDate file
+
+commit 488a7d6e173ecdd34ef645d9ce5b5f6eefaea937
+Author: Elchin Mamedaliev <elchin321@gmail.com>
+Date:   Mon Oct 5 15:11:45 2020 -0400
+
+    Created repo and added new empty CurDate file
+bash-3.2$ exit
+exit
+
+Script done on Mon Oct  5 15:19:11 2020
