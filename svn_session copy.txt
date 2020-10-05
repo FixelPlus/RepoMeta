@@ -1,0 +1,51 @@
+Script started on Mon Oct  5 18:39:08 2020
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ mkdir Repo2
+bash-3.2$ cd Repo2
+bash-3.2$ ls
+bash-3.2$ svnadmin create .
+bash-3.2$ ls
+README.txt	db		hooks
+conf		format		locks
+bash-3.2$ svn co https://github.com/FixelPlus/Repo2.git
+Checked out revision 0.
+bash-3.2$ mkdir trunk
+bash-3.2$ cd trunk/
+bash-3.2$ touch newTestText.txt
+bash-3.2$ vi newTestText.txt 
+bash-3.2$ ls
+newTestText.txt
+bash-3.2$ cd ..
+bash-3.2$ ls
+README.txt	conf		format		locks
+Repo2.git	db		hooks		trunk
+bash-3.2$ svn add trunk
+svn: E155007: '/Users/elchinmamedaliev/Desktop/git/Repo2' is not a working copy
+bash-3.2$ svn co https://github.com/FixelPlus/Repo2.git .
+Checked out revision 0.
+bash-3.2$ svn add trunk
+A         trunk
+A         trunk/newTestText.txt
+bash-3.2$ svn commit -m "Adding .txt file to repo then push to git"
+Adding         trunk
+Adding         trunk/newTestText.txt
+Transmitting file data .done
+Committing transaction...
+Committed revision 1.
+bash-3.2$ svn log
+------------------------------------------------------------------------
+bash-3.2$ svn status
+?       README.txt
+?       Repo2.git
+?       conf
+?       db
+?       format
+?       hooks
+?       locks
+bash-3.2$ exit
+exit
+
+Script done on Mon Oct  5 18:45:25 2020
